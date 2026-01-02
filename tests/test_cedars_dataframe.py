@@ -18,7 +18,7 @@ def spark():
 
 @pytest.fixture
 def expected_schema():
-    with open("tests/fixtures/cedears_schema.yml", "r") as f:
+    with open("tests/cedears_schema.yml", "r") as f:
         return yaml.safe_load(f)
 
 
