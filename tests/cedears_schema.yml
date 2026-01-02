@@ -1,0 +1,35 @@
+columns:
+  - name: DENOMINACION DEL PROGRAMA CEDEAR
+    nullable: false
+
+  - name: Identificación Mercado
+    nullable: false
+
+  - name: Ratio Cedear/Acción ó ADR
+    nullable: true
+
+  - name: Montos Máximos
+    nullable: true
+
+  - name: Mercado de Negociación
+    nullable: true
+
+  - name: Valor Subyacente
+    nullable: true
+
+  - name: Frecuencia de Pago
+    nullable: true
+
+  - name: País de Origen
+    nullable: true
+
+  - name: Industria
+    nullable: true
+
+  - name: Descripción de la Industria
+    nullable: true
+
+  - name: ticker
+    nullable: false
+    rules:
+      ends_with: ".BA"
