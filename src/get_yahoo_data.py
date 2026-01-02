@@ -74,4 +74,6 @@ rows = values[1:]
 
 df = spark.createDataFrame(rows, headers).withColumn("ticker", F.concat(F.col("Identificación Mercado"), F.lit(".BA")))
 
+df.show(truncate=False)
+
 
