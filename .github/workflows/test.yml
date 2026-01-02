@@ -1,4 +1,4 @@
-name: Spark Tests
+name: Spark CI
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  test:
+  ci:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Set up Java
+      - name: Set up Java (required by Spark)
         uses: actions/setup-java@v4
         with:
           distribution: "temurin"
@@ -32,4 +32,8 @@ jobs:
 
       - name: Lint with ruff
         run: |
-          ruff check src
+          ruff check src tests
+
+      - name: Run tests
+        run: |
+          pytest -v
